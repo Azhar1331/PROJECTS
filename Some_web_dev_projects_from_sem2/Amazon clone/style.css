@@ -1,0 +1,583 @@
+*{
+  margin: 0;
+  border: border-box;
+  font-family: Arial;
+}
+
+.navbar{
+  height: 60px;
+  background-color:#0F1111;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+
+.nav-logo{
+  height: 50px;
+  width: 100px;
+}
+.logo{
+  background:url("amazon_ logo.webp");
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+  width: 100%;
+}
+.border{
+  border: 1.5px solid transparent;
+  
+}
+
+.border:hover{
+  border: 1.5px solid yellow;
+}
+      /**box2**/
+
+.add-first{
+  color: #cccccc;
+  font-size: 0.75rem;
+  margin-left: 15px;
+}
+.add-second{
+  color: white;
+  font-size: 1rem;
+  margin-left: 3px;
+}
+
+.add-icon{
+  display: flex;
+  align-items: center;
+}
+
+/* Box3 */
+
+.nav-search:hover{
+  border: 2px solid orange;
+}
+
+.nav-search{
+  display: flex;
+  justify-content: space-evenly;
+  width: 620px;
+  height: 40px;
+  
+}
+.search-select{
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #f3f3f3;
+  width: 50px;
+  text-align: center;
+  border: none;
+
+    
+}
+.search-input{
+  width: 100%;
+  font-size: 1rem;
+  
+
+}
+
+.search-icon{
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #fedb68;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #0F1111;
+}
+/*box4*/
+span{
+  font-size: 0.7rem;
+}
+.nav-second{
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+/*box6*/
+ 
+.nav-cart i {
+  
+  font-size: 30px;
+}
+ .nav-cart{
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+ }
+ /*menu bar*/
+ .panel{
+  height: 40px;
+  background-color: #222f3d;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+ }
+ .panel-ops p {
+  display: inline;
+  margin-left: 15px;
+ 
+ }
+ .panel-ops{
+   width: 70%;
+   font-size: 0.85rem;
+  
+  }
+  .panel-deals{
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+ .hero-section{
+  background: url("hero-image.jpg");
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  }
+  .hero-msg{
+    
+    background-color: white;
+    height: 40px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    
+   }
+   .hero-msg a {
+    color: #007185;
+   
+   }
+    /* shop-section */
+  .shop-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e7e6;
+   
+  }  
+.box{
+  height: 350px;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: whitesmoke;
+ }
+  /* box1 */
+.game{
+  height: 250px;
+  width: 250px;
+  background-image: url(box7.jpg);
+  background-size: cover;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box1-content h2 {
+  text-align: center;
+ }
+ .box1-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+/* box2 */
+.kitchen{
+  height: 250px;
+  width: 250px;
+  background-image: url(box4.3.jpg);
+  background-size: cover;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box2-content h2 {
+  text-align: center;
+ }
+ .box2-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box3 */
+ .toys{
+  height: 250px;
+  width: 250px;
+  background-image:url(box8.jpg) ;
+  background-size: cover;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box3-content h2 {
+  text-align: center;
+ }
+ .box3-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box4 */
+ .clothes{
+  height: 250px;
+  width: 250px;
+  background-image:url(box5.2.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box4-content h2 {
+  text-align: center;
+ }
+ .box4-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box5 */
+ .Chair{
+  height: 250px;
+  width: 250px;
+  background-image:url(box2.4.jpg);
+  background-size: contain;
+    background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box5-content h2 {
+  text-align: center;
+ }
+ .box5-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box6 */
+ .headphones{
+  height: 250px;
+  width: 250px;
+  background-image:url(box2.1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 25px;
+  margin-top: 10px;
+ 
+ }
+ 
+ .box6-content h2 {
+  text-align: center;
+ }
+ .box6-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box7 */
+ .mouse{
+    height: 250px;
+    width: 250px;
+    background-image:url(box2.3.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 25px;
+    margin-top: 10px;
+   }
+  
+ 
+ .box7-content h2 {
+  text-align: center;
+ }
+ .box7-content p {
+  color:#007185 ;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+ /* box8 */
+ .keyboard{
+  height: 250px;
+  width: 250px;
+  background-image:url(box2.2.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box8-content h2 {
+text-align: center;
+}
+.box8-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box9 */
+.bed{
+  height: 250px;
+  width: 250px;
+  background-image:url(box1.4.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box9-content h2 {
+text-align: center;
+}
+.box9-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box10  */
+/* url(box5.4.jpg) */
+.shoes{
+  height: 250px;
+  width: 250px;
+  background-image:url(box5.4.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box10-content h2 {
+text-align: center;
+}
+.box10-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box11 */
+/* url(box6.2.jpg) */
+.hanger{
+  height: 250px;
+  width: 250px;
+  background-image:url(box6.2.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box11-content h2 {
+text-align: center;
+}
+.box11-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box12 */
+/* url(box6.4.jpg) */
+.shampoo{
+  height: 250px;
+  width: 250px;
+  background-image:url(box6.4.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box12-content h2 {
+text-align: center;
+}
+.box12-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box13 */
+/* url(box6.1.jpg) */
+.glassvase{
+  height: 250px;
+  width: 250px;
+  background-image:url(box6.1.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box13-content h2 {
+text-align: center;
+}
+.box13-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box14 */
+/* url(box5.3.jpg) */
+.top{
+  height: 250px;
+  width: 250px;
+  background-image:url(box5.3.jpg) ;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box14-content h2 {
+text-align: center;
+}
+.box14-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box15 */
+/* url(box4.4.jpg) */
+.kettle{
+  height: 250px;
+  width: 250px;
+  background-image:url(box4.4.jpg) ;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box15-content h2 {
+text-align: center;
+}
+.box15-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+/* box16 */
+/* url(box1.3.jpg) */
+.vase{
+  height: 250px;
+  width: 250px;
+  background-image:url(box1.3.jpg) ;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 25px;
+  margin-top: 10px;
+ }
+
+
+.box16-content h2 {
+text-align: center;
+}
+.box16-content p {
+color:#007185 ;
+margin-left: 25px;
+margin-top: 10px;
+}
+
+/* Footer */
+.foot-panel1{
+  height: 50px;
+  background-color: #37475a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size:0.85rem;
+}
+.foot-panel2{
+  background-color: #222f3d;
+  color: white;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.foot-panel2 a {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 20px;
+  color: #dddddd;
+}
+ul{
+  margin-top: 20px;
+}
+.foot-panel2 p{
+  font-size: 1.24rem;
+  font-weight: 700;
+}
+
+.foot-panel3{
+  background-color: #222f3d;
+  height: 70px;
+  border-top: 0.5px solid #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.logo2{
+  background:url("amazon_ logo.webp");
+  background-size: cover;
+  background-position: center;
+  height: 50px;
+}
+.endlogo{
+  height: 50px;
+  width: 100px;
+ 
+}
+
+.foot-panel4{
+  height: 80px;
+  font-size: 0.7rem;
+  text-align: center;
+  background-color: #0F1111;
+  color: white;
+}
+.pages {
+  padding: 25px;
+  
+  
+}
+.copyright{
+  padding-top: 5px;
+}
+.foot-panel4 a {
+  margin-left: 5px;
+}

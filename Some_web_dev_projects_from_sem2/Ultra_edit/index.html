@@ -1,0 +1,715 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Improved Navbar</title>
+
+    <style>/* Resetting default margins and paddings */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI";
+      }
+      
+      /* HEADER Improvement:
+       - Before: Only logo was fixed
+       - Now: Entire navbar (header) is fixed at the top
+      */
+      header {
+        /* position: fixed; */
+        /* top: 0; */
+        width: 100%;
+        background-color: white; /* Added white background to prevent content overlap */
+        z-index: 999; /* Stay on top */
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Added slight shadow for better look */
+      }
+      
+      /* NAVBAR Container */
+      #navbar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 76px;
+        padding: 0 20px; /* Smaller padding */
+        width: 100%;
+        max-width: 1200px; /* ✅ NEW - limit max width */
+        margin: 0 auto; /* ✅ NEW - center it */
+      }
+      
+      /* Left Section for Logo */
+      .left-section {
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Right Section for Links */
+      .right-section {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Gap between links */
+      }
+      
+      /* Logo Image Styling */
+      .image-container {
+        height: 65px;
+        width: 182px;
+        background-image: url(logo.PNG); /* Your logo file */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      /* Link Styling */
+      .options {
+        text-decoration: none;
+        color: #222222;
+        font-size: 16px;
+        transition: color 0.3s ease; /* Smooth hover effect */
+      }
+      
+      /* Improvement: Added hover effect */
+      .options:hover {
+        color: #007bff; /* Blue on hover */
+        text-decoration: none;
+      }
+      
+      /* Down arrow image alignment */
+      .downarrow {
+        position: relative;
+        top: 4px; /* Slightly align with text */
+      }
+      
+      /* Search icon alignment */
+      #search {
+        position: relative;
+        top: 5px;
+        left: -8px;
+        height: 45px; /* Improved sizing */
+        width: 40px;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        #navbar_container {
+          flex-direction: column; /*Stack logo and links vertically */
+          align-items: flex-start;
+          height: auto;
+          padding: 10px 20px;
+        }
+      
+        .right-section {
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          margin-top: 10px;
+        }
+      }
+      
+      .main-section {
+        display: grid;
+        justify-content: center;
+      }
+      
+      .hero-section {
+        margin-top: 100px;
+        /* border: 2px solid black; */
+        height: 500px;
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        /* display: block; */
+      }
+      
+      h1 {
+        font-size: 48px;
+        font-weight: 400;
+      }
+      
+      h3 {
+        margin-top: 45px;
+        font-weight: 400;
+      }
+      
+      #mac_linux_ver {
+        font-size: 14px;
+        text-decoration: none;
+        height: 48px;
+        width: 292px;
+        color: white;
+        background-color: #0086d1;
+        padding: 12px 15px;
+        display: inline-block;
+        margin-top: 50px;
+      }
+      
+      #ver{
+        font-size: 25px;
+        /* text-align: start; */
+      }
+      
+      #ver_no{
+        font-size: 14px;
+      }
+      
+      
+      
+      
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 34px;
+        justify-content: center;
+        margin-bottom: 30px;
+        
+        
+       
+      
+      }
+        
+      .div1 {
+        grid-row: span 2 / span 2;
+        background-color: aliceblue;
+        height: 200px;
+      }
+      
+      .div2 {
+        grid-row: span 2 / span 2;
+        background-color: aliceblue;
+        
+      }
+      
+      .div3 {
+        grid-row: span 2 / span 2;
+          background-color: aliceblue;
+      }
+      
+      .div4 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 3;
+          background-color: aliceblue;
+      }
+      
+      .div5 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 3;
+          background-color: aliceblue;
+      }
+      
+      .div6 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 3;
+          background-color: aliceblue;
+      }
+      
+      .div7 {
+        grid-row: span 2 / span 2;
+      
+          background-color: aliceblue;
+        grid-column-start: 2;
+        grid-row-start: 5;
+      }
+      
+      .div8 {
+        grid-row: span 2 / span 2;
+        grid-column-start: 1;
+        grid-row-start: 5;
+          background-color: aliceblue;
+      }
+      
+      .div9 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 5;
+          background-color: aliceblue;
+      }
+      
+      .div10 {
+        grid-row: span 2 / span 2;
+        grid-row-start: 7;
+          background-color: aliceblue;
+      }
+            
+      .language{
+        text-align: center;
+        position :relative;
+        top : -18px;
+      }
+      .eng_lang{
+        text-align: center;
+        font-weight: 200;
+      }
+      
+      .download_64_bit{
+        font-size: 14px;
+       text-align: center;
+       text-decoration: none;
+       padding: 8px 15px;
+       background: green;
+       color: white;
+       display: inline-block;
+       position: relative;
+       top:13px ;
+       left:55px ;
+      
+      
+      }
+      .info{
+        display: inline-block;
+        height: 20px;
+        width: 80px;
+        text-align: center;
+        font-size: smaller;
+        position:relative;
+        top: 61px;
+       
+      
+      }</style>
+    <link rel="stylesheet" href="style.css" /> 
+  </head>
+
+  <body>
+    <header>
+      <div id="navbar_container">
+         Left Section for Logo 
+        <div class="left-section">
+          <div class="image-container"></div>
+        </div>
+
+     Right Section for Links 
+        <div class="right-section">
+          <a href="#" class="options" title="Products">
+            Products <img class="downarrow" src="down_arrow.PNG" alt="▼" />
+          </a>
+          <a href="#" class="options" title="For Business">
+            For Business <img class="downarrow" src="down_arrow.PNG" alt="▼" />
+          </a>
+          <a href="#" class="options" title="Resources">
+            Resources <img class="downarrow" src="down_arrow.PNG" alt="▼" />
+          </a>
+          <a href="#" class="options" title="Academic licensing">
+            Academic licensing
+            <img class="downarrow" src="down_arrow.PNG" alt="▼" />
+          </a>
+          <a href="#" class="options" title="Our Company">
+            Our Company <img class="downarrow" src="down_arrow.PNG" alt="▼" />
+          </a>
+
+          <a href="#" class="options" title="Search">
+            <img id="search" src="search-logo.PNG" alt="Search" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-section">
+        <div class="hero-section">
+          <h1>Download <strong>UltraEdit</strong> For Windows</h1>
+          <h3>
+            Download and try UltraEdit before you buy it! This download includes
+            the full Windows version of the text editor.
+          </h3>
+
+          <a id="mac_linux_ver" href="#">DOWNLOAD MAC OR LINUX VERSION</a>
+
+          <h3 id="ver">
+            Download UltraEdit
+            <small id="ver_no"
+              >v2024.3 (released 2025-03-21) | Hotfix information</small
+            >
+          </h3>
+        </div>
+
+        <div class="grid">
+          <div class="parent">
+            <div class="div1">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div2">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div3">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+
+            <div class="div4">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div5">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div6">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div7">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div8">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div9">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+            <div class="div10">
+              <h3 class="language"><strong>English</strong></h3>
+              <h4 class="eng_lang">German</h4>
+
+              <a class="download_64_bit" href="#">Donwload 64-bit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Improved Navbar</title>
+
+  <style>
+    /* Resetting default margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI";
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      z-index: 999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 76px;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .image-container {
+      height: 65px;
+      width: 182px;
+      background-image: url(logo.PNG);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .options {
+      text-decoration: none;
+      color: #222222;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .options:hover {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .downarrow {
+      position: relative;
+      top: 4px;
+    }
+
+    #search {
+      position: relative;
+      top: 5px;
+      left: -8px;
+      height: 45px;
+      width: 40px;
+    }
+
+    /* Hamburger menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: black;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    @media (max-width: 768px) {
+      #navbar_container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .right-section {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+        display: none;
+      }
+
+      .right-section.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    .main-section {
+      display: grid;
+      justify-content: center;
+    }
+
+    .hero-section {
+      margin-top: 120px;
+      height: 500px;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-top: 45px;
+      font-weight: 400;
+    }
+
+    #mac_linux_ver {
+      font-size: 14px;
+      text-decoration: none;
+      height: 48px;
+      width: 292px;
+      color: white;
+      background-color: #0086d1;
+      padding: 12px 15px;
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    #ver {
+      font-size: 25px;
+    }
+
+    #ver_no {
+      font-size: 14px;
+    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .parent > div {
+      background-color: aliceblue;
+      height: 200px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .language {
+      position: relative;
+      top: -18px;
+    }
+
+    .eng_lang {
+      font-weight: 200;
+    }
+
+    .download_64_bit {
+      font-size: 14px;
+      text-decoration: none;
+      padding: 8px 15px;
+      background: green;
+      color: white;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .parent {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div id="navbar_container">
+      <div class="left-section">
+        <div class="image-container"></div>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="right-section" id="right-section">
+        <a href="#" class="options" title="Products">Products <img class="downarrow" src="down_arrow.PNG" alt="▼" /></a>
+        <a href="#" class="options" title="For Business">For Business <img class="downarrow" src="down_arrow.PNG" alt="▼" /></a>
+        <a href="#" class="options" title="Resources">Resources <img class="downarrow" src="down_arrow.PNG" alt="▼" /></a>
+        <a href="#" class="options" title="Academic licensing">Academic licensing <img class="downarrow" src="down_arrow.PNG" alt="▼" /></a>
+        <a href="#" class="options" title="Our Company">Our Company <img class="downarrow" src="down_arrow.PNG" alt="▼" /></a>
+        <a href="#" class="options" title="Search"><img id="search" src="search-logo.PNG" alt="Search" /></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-section">
+      <div class="hero-section">
+        <h1>Download <strong>UltraEdit</strong> For Windows</h1>
+        <h3>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</h3>
+
+        <a id="mac_linux_ver" href="#">DOWNLOAD MAC OR LINUX VERSION</a>
+
+        <h3 id="ver">
+          Download UltraEdit
+          <small id="ver_no">v2024.3 (released 2025-03-21) | Hotfix information</small>
+        </h3>
+      </div>
+
+      <div class="grid">
+        <div class="parent">
+          <div class="div1">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div2">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div3">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div4">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div5">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div6">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div7">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div8">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div9">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+          <div class="div10">
+            <h3 class="language"><strong>English</strong></h3>
+            <h4 class="eng_lang">German</h4>
+            <a class="download_64_bit" href="#">Download 64-bit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('menu-toggle');
+    const rightSection = document.getElementById('right-section');
+
+    toggleBtn.addEventListener('click', () => {
+      rightSection.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
+

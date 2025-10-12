@@ -1,0 +1,261 @@
+/* Resetting default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+/* HEADER Improvement:
+ - Before: Only logo was fixed
+ - Now: Entire navbar (header) is fixed at the top
+*/
+header {
+  /* position: fixed; */
+  /* top: 0; */
+  width: 100%;
+  background-color: white; /* Added white background to prevent content overlap */
+  z-index: 999; /* Stay on top */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Added slight shadow for better look */
+}
+
+/* NAVBAR Container */
+#navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+  padding: 0 20px; /* Smaller padding */
+  width: 100%;
+  max-width: 1200px; /* ✅ NEW - limit max width */
+  margin: 0 auto; /* ✅ NEW - center it */
+}
+
+/* Left Section for Logo */
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Right Section for Links */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Gap between links */
+}
+
+/* Logo Image Styling */
+.image-container {
+  height: 65px;
+  width: 182px;
+  background-image: url(logo.PNG); /* Your logo file */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Link Styling */
+.options {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Improvement: Added hover effect */
+.options:hover {
+  color: #007bff; /* Blue on hover */
+  text-decoration: none;
+}
+
+/* Down arrow image alignment */
+.downarrow {
+  position: relative;
+  top: 4px; /* Slightly align with text */
+}
+
+/* Search icon alignment */
+#search {
+  position: relative;
+  top: 5px;
+  left: -8px;
+  height: 45px; /* Improved sizing */
+  width: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #navbar_container {
+    flex-direction: column; /*Stack logo and links vertically */
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .right-section {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+.main-section {
+  display: grid;
+  justify-content: center;
+}
+
+.hero-section {
+  margin-top: 100px;
+  /* border: 2px solid black; */
+  height: 500px;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  /* display: block; */
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+h3 {
+  margin-top: 45px;
+  font-weight: 400;
+}
+
+#mac_linux_ver {
+  font-size: 14px;
+  text-decoration: none;
+  height: 48px;
+  width: 292px;
+  color: white;
+  background-color: #0086d1;
+  padding: 12px 15px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+#ver{
+  font-size: 25px;
+  /* text-align: start; */
+}
+
+#ver_no{
+  font-size: 14px;
+}
+
+
+
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 34px;
+  justify-content: center;
+  margin-bottom: 30px;
+  
+  
+ 
+
+}
+  
+.div1 {
+  grid-row: span 2 / span 2;
+  background-color: aliceblue;
+  height: 200px;
+}
+
+.div2 {
+  grid-row: span 2 / span 2;
+  background-color: aliceblue;
+  
+}
+
+.div3 {
+  grid-row: span 2 / span 2;
+    background-color: aliceblue;
+}
+
+.div4 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 3;
+    background-color: aliceblue;
+}
+
+.div5 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 3;
+    background-color: aliceblue;
+}
+
+.div6 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 3;
+    background-color: aliceblue;
+}
+
+.div7 {
+  grid-row: span 2 / span 2;
+
+    background-color: aliceblue;
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+
+.div8 {
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 5;
+    background-color: aliceblue;
+}
+
+.div9 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 5;
+    background-color: aliceblue;
+}
+
+.div10 {
+  grid-row: span 2 / span 2;
+  grid-row-start: 7;
+    background-color: aliceblue;
+}
+      
+.language{
+  text-align: center;
+  position :relative;
+  top : -18px;
+}
+.eng_lang{
+  text-align: center;
+  font-weight: 200;
+}
+
+.download_64_bit{
+  font-size: 14px;
+ text-align: center;
+ text-decoration: none;
+ padding: 8px 15px;
+ background: green;
+ color: white;
+ display: inline-block;
+ position: relative;
+ top:13px ;
+ left:55px ;
+
+
+}
+.info{
+  display: inline-block;
+  height: 20px;
+  width: 80px;
+  text-align: center;
+  font-size: smaller;
+  position:relative;
+  top: 61px;
+ 
+
+}
