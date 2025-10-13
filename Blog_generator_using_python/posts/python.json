@@ -1,0 +1,6 @@
+{
+    "title": "Python",
+    "author": "Azhar",
+    "date": "2025-10-13 17:56:26",
+    "content": "Python is a **high-level, interpreted programming language** renowned for its clear syntax and readability, which significantly reduces the cost of program maintenance and development time. Designed by Guido van Rossum, its philosophy emphasizes code readability with the use of significant **indentation**. As a **dynamically typed** language, Python supports multiple programming paradigms, including object-oriented, imperative, and functional programming. It boasts a massive and comprehensive **standard library** and a thriving ecosystem of external packages (accessible via **pip**), making it the language of choice for diverse applications such as web development (using frameworks like Django and Flask), data science, machine learning, scientific computing, and scripting. "
+}
